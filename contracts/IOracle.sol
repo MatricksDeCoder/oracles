@@ -6,7 +6,7 @@ pragma solidity ^0.7.3;
 
 interface IOracle {
 
-    function getData(bytes32 _key) external view returns(bool _result, uint _date, uint _result);
+    function getData(bytes32 _key) external view returns(bool _result, uint _date, uint _payload);
 
 }
 
