@@ -23,7 +23,7 @@ module.exports = async done => {
         
         response  = await CoinGeckoClient.coins.fetch('bitcoin', {});
         currPrice = parseFloat(response.data.market_data.current_price.usd);
-        currPrice = parseInt(currPrice * 100)    
+        currPrice = parseInt(currPrice * 100)    // 2 decimals to convert to number for blockchain
         console.log("Price received from CoinGecko: ", currPrice)
         
         // create equivalent to below
