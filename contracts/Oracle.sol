@@ -29,6 +29,7 @@ contract Oracle {
 
 
     /// @notice update if an address is a reporter 
+    /// @dev Emits the UpdateReporter event
     /// @param _reporter the address to updated as true or false
     /// @param _isReporter the bool value of true or false to update reporter status
     function updateReporter(address _reporter, bool _isReporter) external {
@@ -38,6 +39,7 @@ contract Oracle {
     }
 
     /// @notice update with new payload
+    /// @dev Emits the UpdateData event
     /// @param _key key for storing and accessing data by e.g string "price"
     /// @param _payload data to store or update
     function updateData(bytes32 _key, uint _payload) external {
