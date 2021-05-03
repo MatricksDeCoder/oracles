@@ -17,7 +17,7 @@ contract Consumer {
         bytes32 _key = keccak256(abi.encodePacked('BTC/USD'));
         (bool _result, uint _date, uint _payload) = oracle.getData(_key);
         require(_result == true, 'could not get data');
-        require(_date >= block.timestamp, 'data too old');
+        require(_date >= block.timestamp - 2 minutes, 'data too old');
         require(_payload > 0, ' invalid price' );
         // can do something with the price
         return _payload;
