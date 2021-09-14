@@ -1,1 +1,1 @@
-# simple examples oracles, ethereum blockchain 
+# simple examples oracles,  ethereum blockchain 
